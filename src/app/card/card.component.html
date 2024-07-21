@@ -4,11 +4,13 @@
   </div>
   <div id="cardContent" [hidden]="showCard" >
     <div id="cardUsername" class="div">
+       Mail:
       <span>{{ cardName }}</span>
     </div>
 
-    <div id="cardPassword" class="div">
-      <span>{{ cardPassword }}</span>
+    <div id="cardPassword" class="div" style="display:inline-block  ">
+      Password:
+      <span (click)="revealPassword()">{{ showPassword? cardPassword: placeholder }}</span>
     </div>
   </div>
 </div>
